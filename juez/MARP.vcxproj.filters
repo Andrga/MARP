@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Archivos de origen">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Archivos de encabezado">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Archivos de recursos">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Archivos de origen\T2">
+      <UniqueIdentifier>{c0dec59f-a3a0-481b-8d37-e2e7311689a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\T1">
+      <UniqueIdentifier>{b44101fd-91b4-4921-8ce7-994a681e863e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="T2\2-1.cpp">
+      <Filter>Archivos de origen\T2</Filter>
+    </ClCompile>
+    <ClCompile Include="T2\2-2.cpp">
+      <Filter>Archivos de origen\T2</Filter>
+    </ClCompile>
+    <ClCompile Include="T2\2-3.cpp">
+      <Filter>Archivos de origen\T2</Filter>
+    </ClCompile>
+    <ClCompile Include="T1\1-1.cpp">
+      <Filter>Archivos de origen\T1</Filter>
+    </ClCompile>
+    <ClCompile Include="T1\1-1Pablo.cpp">
+      <Filter>Archivos de origen\T1</Filter>
+    </ClCompile>
+    <ClCompile Include="T1\1-2.cpp">
+      <Filter>Archivos de origen\T1</Filter>
+    </ClCompile>
+    <ClCompile Include="T2\2-4.cpp">
+      <Filter>Archivos de origen\T2</Filter>
+    </ClCompile>
+    <ClCompile Include="T2\2-5.cpp">
+      <Filter>Archivos de origen\T2</Filter>
+    </ClCompile>
+    <ClCompile Include="T2\2-5-2.cpp">
+      <Filter>Archivos de origen\T2</Filter>
+    </ClCompile>
+    <ClCompile Include="T2\2-L.cpp">
+      <Filter>Archivos de origen\T2</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
