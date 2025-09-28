@@ -134,7 +134,6 @@
     <ClCompile Include="T2\2-2.cpp" />
     <ClCompile Include="T2\2-3.cpp" />
     <ClCompile Include="T2\2-4.cpp" />
-    <ClCompile Include="T2\2-5-2.cpp" />
     <ClCompile Include="T2\2-5.cpp" />
     <ClCompile Include="T2\2-L.cpp" />
   </ItemGroup>

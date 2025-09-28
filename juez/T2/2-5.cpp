@@ -9,61 +9,62 @@
 #include <fstream>
 #include <string>
 #include <queue>
+#include <stack>
 
 using namespace std;
 
 /*@ <answer>
 
-	La funcion recorre los elementos de la cola de prioridad encontrando el que tiene el menor numero de serie
-	y contando las posiciones necesarias para llegar a este.
-	La cola se organiza por posicion en las diferentes pilas, si se encuentran en la misma posicion se prioriza
-	el que tenga menor numero de serie.
-	Coste en tiempo: O(Nlog(M)), siendo N el numero de eventos y M el numero de pacientes.
-	Coste en espacio: O(M), siendo M el numero de pacientes.
+	La funcion Busca el menor elemento de dos pilas, quitando primeramente el menor del top de ambas
+	Para ello, utilizamos una cola de prioridad donde se almacenan el primer comic de cada pila.
+	Coste en tiempo: O(N log(M)), siendo N el numero de Comics y M el numero de pilas de comics.
+	Coste en espacio: O(N), siendo N el numero de comics.
 
  @ </answer> */
 
 struct Comic {
-	int ns; // numero de serie
-	int pla; // numero en la pila
-	int prioridad;
+	int ns; // numero de serie.
+	int pla; // numero en la pila.
 
 	bool operator<(Comic const& other)const {
-		if (pla == other.pla)
-			return other.ns < ns;
-		return other.pla < pla;
+		return other.ns < ns;
 	}
 };
 
-void resolver(priority_queue<Comic>& queue, int const menor, int& m) {
-	if (queue.size() == 0) return;
-	if (queue.size() == 1) {
-		m++;
-		return;
-	}
+int resolver(vector<stack<Comic>>& pilas, priority_queue<Comic>& queue, int const menor) {
+
+	if (queue.top().ns == menor)
+		return 1;
+
 	Comic com = queue.top();
-	if (com.ns == menor) return;
 	queue.pop();
+	// Si la pila ha sido vaciada no se anyade ningun comic nuevo a la cola.
+	if (!pilas[com.pla].empty()) {
+		// Cogemos el siguiente comic de la misma pila que ha sido cogido el anterior.
+		Comic auxCom = pilas[com.pla].top(); pilas[com.pla].pop();
+		queue.push(auxCom);
+	}
 
-	m++;
-
-	resolver(queue, menor, m);
+	return resolver(pilas, queue, menor) + 1;
 }
 
 //@ <answer>
 
 bool resuelvecaso() {
-	// leer los datos de la entrada
+	// Leer los datos de la entrada.
 	int n;
 	cin >> n;
 
-	if (!std::cin)  // fin de la entrada
+	if (!std::cin)  // Fin de la entrada.
 		return false;
 
-	priority_queue<Comic> queue;
+	vector<stack<Comic>> pilas;
+	priority_queue<Comic> tops;
 	int menor = -1;
+	// Lectura de pilas
 	for (size_t i = 0; i < n; i++)
 	{
+		stack<Comic> pila;
 		int k;
 		cin >> k;
 		for (size_t j = 0; j < k; j++)
@@ -73,12 +74,18 @@ bool resuelvecaso() {
 
 			if (menor == -1 || menor > ns)
 				menor = ns;
-			Comic comic = { ns, k - j };
-			queue.push(comic);
+			Comic comic = { ns, i };
+
+			// Si es el primer elemento de la pila se anyade a la cola.
+			if (j == k - 1)
+				tops.push(comic);
+			else // Si no se anyade a su pila correspondiente.
+				pila.push(comic);
 		}
+		pilas.push_back(pila);
 	}
-	int sol = 0;
-	resolver(queue, menor, sol);
+	// Metodo para resolver de manera recursiva.
+	int sol = resolver(pilas, tops, menor);
 	cout << sol << "\n";
 
 	return true;

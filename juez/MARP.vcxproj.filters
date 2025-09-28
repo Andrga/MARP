@@ -45,9 +45,6 @@
     <ClCompile Include="T2\2-5.cpp">
       <Filter>Archivos de origen\T2</Filter>
     </ClCompile>
-    <ClCompile Include="T2\2-5-2.cpp">
-      <Filter>Archivos de origen\T2</Filter>
-    </ClCompile>
     <ClCompile Include="T2\2-L.cpp">
       <Filter>Archivos de origen\T2</Filter>
     </ClCompile>
