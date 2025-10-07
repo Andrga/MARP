@@ -22,6 +22,9 @@
     <Filter Include="Archivos de origen\T3">
       <UniqueIdentifier>{b41a6ad7-528a-44ea-93e3-8c6beb559613}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Archivos de origen\T4">
+      <UniqueIdentifier>{9775d76e-bf4d-44e6-901d-b1d3172699e9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="T2\2-1.cpp">
@@ -59,6 +62,21 @@
     </ClCompile>
     <ClCompile Include="T3\3-3.cpp">
       <Filter>Archivos de origen\T3</Filter>
+    </ClCompile>
+    <ClCompile Include="T3\3-L.cpp">
+      <Filter>Archivos de origen\T3</Filter>
+    </ClCompile>
+    <ClCompile Include="T4\4-1.cpp">
+      <Filter>Archivos de origen\T4</Filter>
+    </ClCompile>
+    <ClCompile Include="T4\4-2.cpp">
+      <Filter>Archivos de origen\T4</Filter>
+    </ClCompile>
+    <ClCompile Include="T4\4-3.cpp">
+      <Filter>Archivos de origen\T4</Filter>
+    </ClCompile>
+    <ClCompile Include="T4\4-4.cpp">
+      <Filter>Archivos de origen\T4</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
