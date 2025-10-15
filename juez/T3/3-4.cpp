@@ -1,13 +1,15 @@
 //
 ///*@ <authors>
 // *
-// * andres, garcia, navarro, marp19
+// * MARP19 Andres Garcia Navarro
 // *
 // *@ </authors> */
 //
 //#include <iostream>
 //#include <fstream>
 //#include <string>
+//#include <queue>
+//#include <stack>
 //#include "IndexPQ.h"
 //
 //using namespace std;
@@ -20,15 +22,7 @@
 // @ </answer> */
 //
 // //@ <answer>
-//struct Task {
-//	int inicio;
-//	int fin;
-//	int periodo;
 //
-//	bool operator<(Task const& other)const {
-//		return inicio < other.inicio;
-//	}
-//};
 //
 //bool resuelvecaso() {
 //	// Leer los datos de la entrada.
@@ -37,45 +31,18 @@
 //
 //	if (!cin)  // Fin de la entrada.
 //		return false;
-//	int id = 0;
-//	IndexPQ<int, Task> tasks;
+//
+//	IndexPQ<int, int> tasks; 
 //	for (size_t i = 0; i < N; i++)
 //	{
 //		int ini, fin;
-//		cin >> ini >> fin;
-//		if (ini < T) {
-//			tasks.push(id, { ini,fin, 0 });
-//			id++;
-//		}
 //	}
 //	for (size_t i = 0; i < M; i++)
 //	{
-//		int ini, fin, periodo;
-//		cin >> ini >> fin >> periodo;
-//		if (ini < T) {
-//			tasks.push(id, { ini,fin, periodo });
-//			id++;
-//		}
+//		int ini, fin;
 //	}
 //
-//	int ultimoFin = -1;
-//	bool colision = false;
-//
-//	while (!tasks.empty() && !colision)
-//	{
-//		Task tAux = tasks.top().prioridad;
-//		int idAux = tasks.top().elem;
-//		if (ultimoFin > tAux.inicio)
-//			colision = true;
-//		else ultimoFin = max(ultimoFin, tAux.fin);
-//		if (tAux.periodo > 0) {
-//			tAux.inicio += tAux.periodo;
-//			tAux.fin += tAux.periodo;
-//			tasks.update(idAux, tAux);
-//		}
-//	}
-//
-//	cout << (colision ? "SI" : "NO") << "\n";
+//	cout << "---\n";
 //
 //	return true;
 //}
