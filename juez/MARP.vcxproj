@@ -152,6 +152,9 @@
     <ClCompile Include="T5\5-2.cpp" />
     <ClCompile Include="T5\5-3.cpp" />
     <ClCompile Include="T5\5-4.cpp" />
+    <ClCompile Include="T5\5-L.cpp" />
+    <ClCompile Include="T6\6-1.cpp" />
+    <ClCompile Include="T6\6-2.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
