@@ -78,7 +78,7 @@ bool resuelveCaso() {
 int main() {
 	// ajustes para que cin extraiga directamente de un fichero
 #ifndef DOMJUDGE
-	ifstream in("T9/casos9.1.txt");
+	ifstream in("T9/casos9.2.txt");
 	if (!in.is_open())
 		cout << "Error: no se ha podido abrir el archivo de entrada." << endl;
 	auto cinbuf = cin.rdbuf(in.rdbuf());
