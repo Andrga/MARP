@@ -160,6 +160,8 @@
     <ClCompile Include="T7\7-2.cpp" />
     <ClCompile Include="T7\7-3.cpp" />
     <ClCompile Include="T8\8-1.cpp" />
+    <ClCompile Include="T8\8-2.cpp" />
+    <ClCompile Include="T8\8-3.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

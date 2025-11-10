@@ -138,5 +138,11 @@
     <ClCompile Include="T8\8-1.cpp">
       <Filter>Archivos de origen\T8</Filter>
     </ClCompile>
+    <ClCompile Include="T8\8-2.cpp">
+      <Filter>Archivos de origen\T8</Filter>
+    </ClCompile>
+    <ClCompile Include="T8\8-3.cpp">
+      <Filter>Archivos de origen\T8</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

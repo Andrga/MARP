@@ -26,19 +26,14 @@
 ///// <param name="D">Vector de distancias</param>
 ///// <param name="K">Distancia que ocupa un parche</param>
 ///// <param name="p">Posiciones de parches</param>
-//int parches(vector<int> const& D, int K, vector<bool>& p) {
-//	// Primer agujero tiene un parche.
-//	p[0] = true;
+//int parches(vector<int> const& D, int K) {
 //	int parches = 1;
 //	int d = D[0]; // Distancia desde el ultimo parche.
 //	for (int i = 1; i < D.size(); i++)
 //	{
 //		// si la distancia al siguiente agujero + la distancia desde que empieza el parche
 //		// es menor al espacio que ocupa un parche, no hace falta parar.
-//		if (D[i] - d <= K) {
-//			p[i] = false; // No hace falta poner parche.
-//		}
-//		else {
+//		if (D[i] - d > K) {
 //			p[i] = true;
 //			parches++;
 //			d = D[i];
@@ -57,11 +52,10 @@
 //	if (!cin) return false;
 //
 //	vector<int> agujeros(N,0); 
-//	vector<bool> p(N, false);
 //
 //	for (int i = 0; i < N; i++)
 //		cin >> agujeros[i];
-//	cout << parches(agujeros, L, p) << "\n";
+//	cout << parches(agujeros, L) << "\n";
 //	return true;
 //}
 //
