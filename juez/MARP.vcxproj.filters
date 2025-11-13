@@ -153,5 +153,11 @@
     <ClCompile Include="T9\9-2.cpp">
       <Filter>Archivos de origen\T9</Filter>
     </ClCompile>
+    <ClCompile Include="T9\9-3.cpp">
+      <Filter>Archivos de origen\T9</Filter>
+    </ClCompile>
+    <ClCompile Include="T9\9-4.cpp">
+      <Filter>Archivos de origen\T9</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -18,30 +18,34 @@
 //
 ///*@ <answer>
 //*
+//* El coste es O(N*Log(N))
+//*
 // @ </answer> */
 //
 //
 // //@ <answer>
 //
-//struct Edificio
+//struct Pila
 //{
-//	int W;
-//	int E;
-//	int id;
+//	int c, f;
 //};
 //
+//
 //// las tareas estan ordenadas de mayor a menor beneficio
-//int resolver(vector<Edificio> const& edificios) {
-//	int cont = 0; // Cantidad de pasadizos.5
-//	int last = -1; // Distancia desde el ultimo tunel
-//
-//	for (auto& e : edificios) {
-//		if (last <= e.W) {   // El edificio no esta cubierto
-//			last = e.E;     // Colocamos un tunel en el extremo derecho
+//int resolver(vector<int> const& pilas, int voltios) {
+//	int cont = 0;	// Cantidad de trabajos.
+//	int n = pilas.size();
+//	int i = 0,
+//		j = n-1;
+//	while (i < j) {
+//		int actV = pilas[i] + pilas[j];
+//		if (actV >= voltios) {
 //			cont++;
+//			i++; j--;
 //		}
+//		else
+//			i++;
 //	}
-//
 //	return cont;
 //}
 //
@@ -49,26 +53,21 @@
 //bool resuelveCaso() {
 //
 //	// leemos la entrada.
-//	int N;
-//	cin >> N;
-//	if (N == 0) return false;
+//	int N, V;
+//	cin >> N >> V;
 //
-//	vector<Edificio> edificios(N);
+//	vector<int> pilas(N);
 //
 //	for (int i = 0; i < N; i++) {
-//		int w, e;
-//		cin >> w >> e;
-//		edificios[i] = { w,e,i };
+//		int p;
+//		cin >> p;
+//		pilas[i] = p;
 //	}
 //
-//	// Ordenar por extremo derecho asc.
-//	sort(edificios.begin(), edificios.end(),
-//		[](const Edificio a, const Edificio& b) {
-//			if (a.E != b.E) return a.E < b.E;
-//			return a.W < b.W;
-//		});
-//
-//	cout << resolver(edificios) << "\n";
+//	// Ordenar por extremo izquierdo.
+//	sort(pilas.begin(), pilas.end());
+//	int s = resolver(pilas, V);
+//	cout << s << "\n";
 //	return true;
 //}
 //
@@ -78,14 +77,18 @@
 //int main() {
 //	// ajustes para que cin extraiga directamente de un fichero
 //#ifndef DOMJUDGE
-//	ifstream in("T9/casos9.1.txt");
+//	ifstream in("T9/casos9.3.txt");
 //	if (!in.is_open())
 //		cout << "Error: no se ha podido abrir el archivo de entrada." << endl;
 //	auto cinbuf = cin.rdbuf(in.rdbuf());
 //#endif
-//
+//	int n;
+//	cin >> n;
 //	// Resolvemos
-//	while (resuelveCaso());
+//	while (n > 0) {
+//		resuelveCaso();
+//		--n;
+//	}
 //
 //	// para dejar todo como estaba al principio
 //#ifndef DOMJUDGE
