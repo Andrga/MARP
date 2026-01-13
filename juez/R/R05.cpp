@@ -1,4 +1,4 @@
-/*@ <authors>
+ï»¿/*@ <authors>
  *
  * Andres Garcia Navarro, MARP19
  *
@@ -15,23 +15,38 @@ using namespace std;
 
 /*@ <answer>
 *
-* Esta sin hacer
+* Complejidad en tiempo  
+* Complejidad en espacio 
 *
 @ </answer> */
 
 
 
 //@ <answer>
+int combinaciones(int K, int S) {
+	vector<int> combinaciones(S + 1, 0);
+	combinaciones[0] = 1;
+	// calcular la matriz sobre el propio vector
+	for (int i = 1; i <= K; ++i) {
+		for (int j = i; j <= S; ++j) {
+			combinaciones[j] += combinaciones[j - i];
+		}
+	}
+	return combinaciones[S];
+}
 
 bool resuelveCaso() {
 
 	// leemos la entrada.
 	int K, S;
 	if (!(cin >> K >> S)) return false;
+	int comb = combinaciones(K, S);
+	cout << (comb > 0 ? to_string(comb) : "IMPOSIBLE") << "\n";
+	return true;
 }
 
 //@ </answer>
-//  Lo que se escriba dejado de esta línea ya no forma parte de la solución.
+//  Lo que se escriba dejado de esta lï¿½nea ya no forma parte de la soluciï¿½n.
 
 int main() {
 	// ajustes para que cin extraiga directamente de un fichero
