@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="R\R1.cpp" />
     <ClCompile Include="T1\1-1.cpp" />
     <ClCompile Include="T1\1-1Pablo.cpp" />
     <ClCompile Include="T1\1-2.cpp" />
@@ -141,6 +142,9 @@
     <ClCompile Include="T3\3-3.cpp" />
     <ClCompile Include="T3\3-4.cpp" />
     <ClCompile Include="T3\3-L.cpp" />
+    <ClCompile Include="T3\T3.3.cpp" />
+    <ClCompile Include="T3\T3.4.cpp" />
+    <ClCompile Include="T3\T3.L.cpp" />
     <ClCompile Include="T4\4-3.cpp" />
     <ClCompile Include="T4\4-1.cpp" />
     <ClCompile Include="T4\4-2.cpp" />
@@ -148,17 +152,23 @@
     <ClCompile Include="T4\4-5.cpp" />
     <ClCompile Include="T4\4-6.cpp" />
     <ClCompile Include="T4\4-L.cpp" />
+    <ClCompile Include="T4\T4.6.cpp" />
+    <ClCompile Include="T4\T4.7.cpp" />
     <ClCompile Include="T5\5-1.cpp" />
     <ClCompile Include="T5\5-2.cpp" />
     <ClCompile Include="T5\5-3.cpp" />
     <ClCompile Include="T5\5-4.cpp" />
     <ClCompile Include="T5\5-L.cpp" />
+    <ClCompile Include="T5\T5.2.cpp" />
+    <ClCompile Include="T5\T5.5.cpp" />
     <ClCompile Include="T6\6-1.cpp" />
     <ClCompile Include="T6\6-2.cpp" />
     <ClCompile Include="T6\6-L.cpp" />
+    <ClCompile Include="T6\T6.L.cpp" />
     <ClCompile Include="T7\7-1.cpp" />
     <ClCompile Include="T7\7-2.cpp" />
     <ClCompile Include="T7\7-3.cpp" />
+    <ClCompile Include="T7\T7.L.cpp" />
     <ClCompile Include="T8\8-1.cpp" />
     <ClCompile Include="T8\8-2.cpp" />
     <ClCompile Include="T8\8-3.cpp" />
@@ -166,6 +176,9 @@
     <ClCompile Include="T9\9-2.cpp" />
     <ClCompile Include="T9\9-3.cpp" />
     <ClCompile Include="T9\9-4.cpp" />
+    <ClCompile Include="T9\9-L.cpp" />
+    <ClCompile Include="TA\A-1.cpp" />
+    <ClCompile Include="TB\B-4.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

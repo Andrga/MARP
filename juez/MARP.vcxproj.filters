@@ -40,6 +40,15 @@
     <Filter Include="Archivos de origen\T9">
       <UniqueIdentifier>{187a7e50-e60e-4b86-9983-d5b88608eabd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Archivos de origen\TA">
+      <UniqueIdentifier>{7d561eb4-c07b-4623-9dfb-575082778cb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\TB">
+      <UniqueIdentifier>{77c1ace9-e2a2-45a0-86e6-5217e6e0bcf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\R">
+      <UniqueIdentifier>{57d7be6c-7bb5-4b49-a11e-8627b52b04e3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="T2\2-1.cpp">
@@ -158,6 +167,45 @@
     </ClCompile>
     <ClCompile Include="T9\9-4.cpp">
       <Filter>Archivos de origen\T9</Filter>
+    </ClCompile>
+    <ClCompile Include="T9\9-L.cpp">
+      <Filter>Archivos de origen\T9</Filter>
+    </ClCompile>
+    <ClCompile Include="TA\A-1.cpp">
+      <Filter>Archivos de origen\TA</Filter>
+    </ClCompile>
+    <ClCompile Include="TB\B-4.cpp">
+      <Filter>Archivos de origen\TB</Filter>
+    </ClCompile>
+    <ClCompile Include="T3\T3.3.cpp">
+      <Filter>Archivos de origen\T3</Filter>
+    </ClCompile>
+    <ClCompile Include="T3\T3.4.cpp">
+      <Filter>Archivos de origen\T3</Filter>
+    </ClCompile>
+    <ClCompile Include="T3\T3.L.cpp">
+      <Filter>Archivos de origen\T3</Filter>
+    </ClCompile>
+    <ClCompile Include="T4\T4.6.cpp">
+      <Filter>Archivos de origen\T4</Filter>
+    </ClCompile>
+    <ClCompile Include="T4\T4.7.cpp">
+      <Filter>Archivos de origen\T4</Filter>
+    </ClCompile>
+    <ClCompile Include="T5\T5.2.cpp">
+      <Filter>Archivos de origen\T5</Filter>
+    </ClCompile>
+    <ClCompile Include="T5\T5.5.cpp">
+      <Filter>Archivos de origen\T5</Filter>
+    </ClCompile>
+    <ClCompile Include="T6\T6.L.cpp">
+      <Filter>Archivos de origen\T6</Filter>
+    </ClCompile>
+    <ClCompile Include="T7\T7.L.cpp">
+      <Filter>Archivos de origen\T7</Filter>
+    </ClCompile>
+    <ClCompile Include="R\R1.cpp">
+      <Filter>Archivos de origen\R</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
