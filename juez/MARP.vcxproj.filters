@@ -204,7 +204,19 @@
     <ClCompile Include="T7\T7.L.cpp">
       <Filter>Archivos de origen\T7</Filter>
     </ClCompile>
-    <ClCompile Include="R\R1.cpp">
+    <ClCompile Include="R\R01.cpp">
+      <Filter>Archivos de origen\R</Filter>
+    </ClCompile>
+    <ClCompile Include="R\R02.cpp">
+      <Filter>Archivos de origen\R</Filter>
+    </ClCompile>
+    <ClCompile Include="R\R03.cpp">
+      <Filter>Archivos de origen\R</Filter>
+    </ClCompile>
+    <ClCompile Include="R\R04.cpp">
+      <Filter>Archivos de origen\R</Filter>
+    </ClCompile>
+    <ClCompile Include="R\R05.cpp">
       <Filter>Archivos de origen\R</Filter>
     </ClCompile>
   </ItemGroup>
