@@ -219,5 +219,14 @@
     <ClCompile Include="R\R05.cpp">
       <Filter>Archivos de origen\R</Filter>
     </ClCompile>
+    <ClCompile Include="R\R06.cpp">
+      <Filter>Archivos de origen\R</Filter>
+    </ClCompile>
+    <ClCompile Include="R\R07.cpp">
+      <Filter>Archivos de origen\R</Filter>
+    </ClCompile>
+    <ClCompile Include="R\R08.cpp">
+      <Filter>Archivos de origen\R</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

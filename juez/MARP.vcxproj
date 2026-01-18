@@ -132,6 +132,9 @@
     <ClCompile Include="R\R03.cpp" />
     <ClCompile Include="R\R04.cpp" />
     <ClCompile Include="R\R05.cpp" />
+    <ClCompile Include="R\R06.cpp" />
+    <ClCompile Include="R\R07.cpp" />
+    <ClCompile Include="R\R08.cpp" />
     <ClCompile Include="T1\1-1.cpp" />
     <ClCompile Include="T1\1-1Pablo.cpp" />
     <ClCompile Include="T1\1-2.cpp" />
