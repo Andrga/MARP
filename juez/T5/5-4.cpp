@@ -96,7 +96,7 @@
 //}
 //
 ////@ </answer>
-////  Lo que se escriba dejado de esta línea ya no forma parte de la solución.
+////  Lo que se escriba dejado de esta lï¿½nea ya no forma parte de la soluciï¿½n.
 //
 //int main() {
 //	// ajustes para que cin extraiga directamente de un fichero
