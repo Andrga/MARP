@@ -62,8 +62,9 @@ int equilibrado(const BinTree<T>& tree, T& minval, T& maxval){
 bool resuelveCaso() {
 
    // leer los datos de la entrada
-   char c;
-   if (!(std::cin >> c))  // fin de la entrada
+   int N;
+   std::cin >> N;
+   if (N == 0)  // fin de la entrada
       return false;
 
     int sol = 0;
@@ -88,7 +89,7 @@ bool resuelveCaso() {
 int main() {
    // ajustes para que cin extraiga directamente de un fichero
 #ifndef DOMJUDGE
-   ifstream in("casos1-1.txt");
+   ifstream in("casos.txt");
    if (!in.is_open())
       cout << "Error: no se ha podido abrir el archivo de entrada." << std::endl;
    auto cinbuf = cin.rdbuf(in.rdbuf());
