@@ -24,12 +24,11 @@ using ll = long long;
 // ================================================================
 //@ <answer>
 
-struct Usuario{
-    ll id;
-    ll periodo;
+struct Caja{
+    int id;
     ll tiempo;
 
-    bool operator<(const Usuario& other) const {
+    bool operator<(const Caja& other) const {
         return tiempo == other.tiempo ? id < other.id : tiempo < other.tiempo;
     }
 };
@@ -38,29 +37,23 @@ bool resuelveCaso()
 {
 
     // leer los datos de la entrada
-    int N;
-    std::cin >> N;
-    if (N == 0) // fin de la entrada
+    int N, C;
+    std::cin >> N >> C;
+    if (N == 0 && C == 0) // fin de la entrada
         return false;
-    PriorityQueue<Usuario> pq;
-
+    PriorityQueue<Caja> pq;
     for (int i = 0; i < N; i++)
-    {
-        ll id, p;
-        std::cin >> id >> p;
-        pq.push({id, p, p});
-    }
+        pq.push({i+1, 0});
 
-    int k; cin >> k;
-    for (int i = 0; i < k; i++)
+    for (int i = 0; i < C; i++)
     {
-        Usuario usr = pq.top(); pq.pop();
-        std::cout << usr.id << "\n";
-        usr.tiempo += usr.periodo;
-        pq.push(usr);
+        int t; std::cin >> t;
+        Caja c = pq.top(); pq.pop();
+        c.tiempo += t;
+        pq.push(c);
     }
     
-    std::cout << "---\n";
+    std::cout << pq.top().id << "\n";
 
     return true;
 }
