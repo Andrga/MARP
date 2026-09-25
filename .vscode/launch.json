@@ -5,10 +5,10 @@
             "name": "Debug C/C++",
             "type": "cppdbg",
             "request": "launch",
-            "program": "d:\\Archivos de usuario\\Andres\\Documentos\\Repositorios\\MARP\\M2\\juez\\sem2\\Lo que cuesta sumar\\T2-3_debug.exe",
+            "program": "d:\\Archivos de usuario\\Andres\\Documentos\\Repositorios\\MARP\\M2\\juez\\sem2\\Unidad Curiosa de Monitorizacion\\T2-2_debug.exe",
             "args": [],
             "stopAtEntry": true,
-            "cwd": "d:\\Archivos de usuario\\Andres\\Documentos\\Repositorios\\MARP\\M2\\juez\\sem2\\Lo que cuesta sumar",
+            "cwd": "d:\\Archivos de usuario\\Andres\\Documentos\\Repositorios\\MARP\\M2\\juez\\sem2\\Unidad Curiosa de Monitorizacion",
             "environment": [
                 {
                     "name": "PATH",

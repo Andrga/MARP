@@ -24,7 +24,15 @@ using ll = long long;
 // ================================================================
 //@ <answer>
 
-// Funcion recursiva comprueba si el arbol dado es AVL
+struct Usuario{
+    ll id;
+    ll periodo;
+    ll tiempo;
+
+    bool operator<(const Usuario& other) const {
+        return tiempo == other.tiempo ? id < other.id : tiempo < other.tiempo;
+    }
+};
 
 bool resuelveCaso()
 {
@@ -34,26 +42,25 @@ bool resuelveCaso()
     std::cin >> N;
     if (N == 0) // fin de la entrada
         return false;
-    PriorityQueue<ll> pq;
+    PriorityQueue<Usuario> pq;
 
     for (int i = 0; i < N; i++)
     {
-        int e;
-        std::cin >> e;
-        pq.push(e);
+        ll id, p;
+        std::cin >> id >> p;
+        pq.push({id, p, p});
     }
 
-    ll coste= 0;
-    while (pq.size() > 1)
+    int k; cin >> k;
+    for (int i = 0; i < k; i++)
     {
-        ll a = pq.top(); pq.pop();
-        ll b = pq.top(); pq.pop();
-        ll sum = a+b;
-        coste += sum;
-        pq.push(sum);
+        Usuario usr = pq.top(); pq.pop();
+        std::cout << usr.id << "\n";
+        usr.tiempo += usr.periodo;
+        pq.push(usr);
     }
-
-    std::cout << coste << "\n";
+    
+    std::cout << "---\n";
 
     return true;
 }
