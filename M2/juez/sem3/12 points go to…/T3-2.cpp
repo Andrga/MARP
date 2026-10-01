@@ -1,6 +1,6 @@
 /*@ <authors>
  *
- * MARP30 Nombre Apellidos
+ * MARP30 Andrés García Navarro
  *
  *@ </authors> */
 
@@ -11,7 +11,6 @@ using namespace std;
 
 // propios o los de las estructuras de datos de clase
 #include "PriorityQueue.h"
-using ll = long long;
 
 /*@ <answer>
 
@@ -23,45 +22,48 @@ using ll = long long;
 // Escribe el código completo de tu solución aquí debajo
 // ================================================================
 //@ <answer>
-
-struct Usuario{
-    ll id;
-    ll periodo;
-    ll tiempo;
-
-    bool operator<(const Usuario& other) const {
-        return tiempo == other.tiempo ? id < other.id : tiempo < other.tiempo;
-    }
-};
-
 bool resuelveCaso()
 {
 
     // leer los datos de la entrada
-    int N;
-    std::cin >> N;
-    if (N == 0) // fin de la entrada
+    int E, P;
+    std::cin >> E >> P;
+    if (E == 0 || P == 0) // fin de la entrada
         return false;
-    PriorityQueue<Usuario> pq;
 
-    for (int i = 0; i < N; i++)
+    PriorityQueue<int, greater<int>> min;
+    PriorityQueue<int> max;
+    min.push(E);
+
+    for (int i = 0; i < P; i += 1)
     {
-        ll id, p;
-        std::cin >> id >> p;
-        pq.push({id, p, p});
-    }
+        for (int j = 0; j < 2; j++)
+        {
+            int paj;
+            cin >> paj;
 
-    int k; cin >> k;
-    for (int i = 0; i < k; i++)
-    {
-        Usuario usr = pq.top(); pq.pop();
-        std::cout << usr.id << "\n";
-        usr.tiempo += usr.periodo;
-        pq.push(usr);
-    }
-    
-    std::cout << "---\n";
+            if (paj < min.top())
+                min.push(paj);
+            else
+                max.push(paj);
+        }
 
+        while (min.size() != max.size() + 1)
+        {
+            if (min.size() > max.size() + 1)
+            {
+                max.push(min.top());
+                min.pop();
+            }
+            else
+            {
+                min.push(max.top());
+                max.pop();
+            }
+        }
+        std::cout << min.top() << " ";
+    }
+    std::cout << "\n";
     return true;
 }
 

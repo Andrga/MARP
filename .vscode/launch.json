@@ -5,10 +5,10 @@
             "name": "Debug C/C++",
             "type": "cppdbg",
             "request": "launch",
-            "program": "d:\\Archivos de usuario\\Andres\\Documentos\\Repositorios\\MARP\\M2\\juez\\sem2\\Unidad Curiosa de Monitorizacion\\T2-2_debug.exe",
+            "program": "d:\\Archivos de usuario\\Andres\\Documentos\\Repositorios\\MARP\\M2\\juez\\sem3\\Pajaros en vuelo\\T3-1_debug.exe",
             "args": [],
             "stopAtEntry": true,
-            "cwd": "d:\\Archivos de usuario\\Andres\\Documentos\\Repositorios\\MARP\\M2\\juez\\sem2\\Unidad Curiosa de Monitorizacion",
+            "cwd": "d:\\Archivos de usuario\\Andres\\Documentos\\Repositorios\\MARP\\M2\\juez\\sem3\\Pajaros en vuelo",
             "environment": [
                 {
                     "name": "PATH",
