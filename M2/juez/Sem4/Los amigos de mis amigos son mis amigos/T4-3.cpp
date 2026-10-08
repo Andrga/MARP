@@ -23,52 +23,64 @@ using namespace std;
 // ================================================================
 //@ <answer>
 
-class ArbolLibre {
+class Amigos
+{
 private:
   std::vector<bool> visit; // visit[v] = ¿hay camino de s a v?
-  int esArbol;
+  int mayor;
 
 public:
-  ArbolLibre(const Grafo &g) : visit(g.V(), false), esArbol(false) {
-    std::queue<int> q;
-    visit[0] = true;
-    q.push(0);
-    while (!q.empty()) {
-      int v = q.front();
-      q.pop();
-      for (int w : g.ady(v)) {
-        if (!visit[w]) {
-          visit[w] = true;
-          q.push(w);
-        } else if (ant[v] != w && w != _s) {
-          esArbol = false;
-        }
+  Amigos(const Grafo &g) : visit(g.V(), false), mayor(0)
+  {
+    for (size_t i = 0; i < g.V(); i++)
+      if (!visit[i])
+      {
+        int a = dfs(g, i);
+        mayor = a > mayor ? a : mayor;
+      }
+  }
+
+  int grupoMayor() const { return mayor; }
+
+private:
+  int dfs(const Grafo &G, int v)
+  {
+    visit[v] = true;
+    int a = 1;
+    for (int w : G.ady(v))
+    {
+      if (!visit[w])
+      {
+        a += dfs(G, w);
       }
     }
+    return a;
   }
-  bool libre() { return visit.size() - 1 == conex; }
 };
 
-void resuelveCaso() {
+void resuelveCaso()
+{
 
   // leer los datos de la entrada
-  int V, A;
-  std::cin >> V >> A;
-  Grafo g(V);
+  int N, M;
+  std::cin >> N >> M;
+  Grafo g(N);
 
-  for (int i = 0; i < A; i++) {
+  for (int i = 0; i < M; i++)
+  {
     int v, w;
     cin >> v >> w;
-    g.ponArista(v, w);
+    g.ponArista(v-1, w-1);
   }
-  ArbolLibre a(g);
-  cout << (a.libre() ? "SI" : "NO") << "\n";
+  Amigos a(g);
+  cout << a.grupoMayor() << "\n";
 }
 
 //@ </answer>
 //  Lo que se escriba debajo de esta línea ya no forma parte de la solución.
 
-int main() {
+int main()
+{
   // ajustes para que cin extraiga directamente de un fichero
 #ifndef DOMJUDGE
   ifstream in("casos.txt");
