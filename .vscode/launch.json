@@ -5,10 +5,10 @@
             "name": "Debug C/C++",
             "type": "cppdbg",
             "request": "launch",
-            "program": "d:\\Archivos de usuario\\Andres\\Documentos\\Repositorios\\MARP\\M2\\juez\\Sem4\\Los numeros de Bacon\\T4-5_debug.exe",
+            "program": "d:\\Archivos de usuario\\Andres\\Documentos\\Repositorios\\MARP\\M2\\juez\\Sem4\\Un nodo muy muy lejano\\T4-7_debug.exe",
             "args": [],
             "stopAtEntry": true,
-            "cwd": "d:\\Archivos de usuario\\Andres\\Documentos\\Repositorios\\MARP\\M2\\juez\\Sem4\\Los numeros de Bacon",
+            "cwd": "d:\\Archivos de usuario\\Andres\\Documentos\\Repositorios\\MARP\\M2\\juez\\Sem4\\Un nodo muy muy lejano",
             "environment": [
                 {
                     "name": "PATH",
